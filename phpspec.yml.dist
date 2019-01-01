@@ -1,0 +1,4 @@
+suites:
+  default:
+    namespace: Aggrego\BasicBlockDomainProfile
+    psr4_prefix: Aggrego\BasicBlockDomainProfile
