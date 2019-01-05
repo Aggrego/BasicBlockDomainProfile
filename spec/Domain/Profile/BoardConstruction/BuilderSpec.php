@@ -36,13 +36,13 @@ class BuilderSpec extends ObjectBehavior
 
     function it_should_build_data_prototype()
     {
-        $key = new Key(['name' => 'test', 'value' => 'test_value']);
+        $key = new Key(['name' => 'test', 'value' => 'test_value', 'uuid' => '7835a2f1-65c4-4e05-aacf-2e9ed950f5f2']);
         $this->build($key)->shouldBeAnInstanceOf(Board::class);
     }
 
     function it_should_throw_exception_with_invalid_key_name()
     {
-        $key = new Key(['value' => 'test_value']);
+        $key = new Key(['value' => 'test_value', 'uuid' => '7835a2f1-65c4-4e05-aacf-2e9ed950f5f2']);
         $unableToBuildBoardException = new UnableToBuildBoardException('Unable to create board due to: Array does not contain an element with key "name"');
         $this->shouldThrow($unableToBuildBoardException)
             ->during('build', [$key]);
@@ -50,7 +50,7 @@ class BuilderSpec extends ObjectBehavior
 
     function it_should_throw_exception_with_invalid_key_value()
     {
-        $key = new Key(['name' => 'test']);
+        $key = new Key(['name' => 'test', 'uuid' => '7835a2f1-65c4-4e05-aacf-2e9ed950f5f2']);
         $unableToBuildBoardException = new UnableToBuildBoardException('Unable to create board due to: Array does not contain an element with key "value"');
         $this->shouldThrow($unableToBuildBoardException)
             ->during('build', [$key]);

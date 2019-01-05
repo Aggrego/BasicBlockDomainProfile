@@ -26,6 +26,7 @@ use Exception;
 
 class Transformation implements DomainTransformation
 {
+    private const KEY_UUID = 'uuid';
     private const KEY_NAME = 'name';
     private const KEY_VALUE = 'value';
 
@@ -45,7 +46,12 @@ class Transformation implements DomainTransformation
         }
 
         if (isset($keyValue[self::KEY_NAME])) {
-            $key = new Key(['name' => $keyValue[self::KEY_NAME]]);
+            $key = new Key(
+                [
+                    self::KEY_NAME => $keyValue[self::KEY_NAME],
+                    self::KEY_UUID => $board->getKey()->getValue()[self::KEY_UUID]
+                ]
+            );
         } else {
             $key = $board->getKey();
         }

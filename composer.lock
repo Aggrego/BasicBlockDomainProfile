@@ -1609,12 +1609,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "e1c5d251f7aa48ce478c19b62d2429b07349e829"
+                "reference": "d4c8c3b394bcd5ee2f415f303af967634e7197f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/e1c5d251f7aa48ce478c19b62d2429b07349e829",
-                "reference": "e1c5d251f7aa48ce478c19b62d2429b07349e829",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/d4c8c3b394bcd5ee2f415f303af967634e7197f0",
+                "reference": "d4c8c3b394bcd5ee2f415f303af967634e7197f0",
                 "shasum": ""
             },
             "require": {
@@ -1674,7 +1674,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-03T09:16:58+00:00"
+            "time": "2019-01-05T16:38:08+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1682,12 +1682,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "249a31f94a62ac1f12926cd8d6dd37f22cc695cd"
+                "reference": "87bd8a44eadf28fc04d668f5e1875ddfe798bf6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/249a31f94a62ac1f12926cd8d6dd37f22cc695cd",
-                "reference": "249a31f94a62ac1f12926cd8d6dd37f22cc695cd",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/87bd8a44eadf28fc04d668f5e1875ddfe798bf6e",
+                "reference": "87bd8a44eadf28fc04d668f5e1875ddfe798bf6e",
                 "shasum": ""
             },
             "require": {
@@ -1738,7 +1738,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-03T09:16:58+00:00"
+            "time": "2019-01-05T16:38:08+00:00"
         },
         {
             "name": "symfony/filesystem",

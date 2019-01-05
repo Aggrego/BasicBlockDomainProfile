@@ -38,7 +38,7 @@ class TransformationSpec extends ObjectBehavior
         $key = new Key(['name' => 'test2', 'value' => 'new_test_value']);
         $board = new Board(
             new Uuid('7835a2f1-65c4-4e05-aacf-2e9ed950f5f2'),
-            new Key(['name' => 'test']),
+            new Key(['name' => 'test', 'uuid' => '7835a2f1-65c4-4e05-aacf-2e9ed950f5f2']),
             Factory::factory('1.0'),
             new Metadata(new Data('test_value')),
             null
@@ -51,7 +51,7 @@ class TransformationSpec extends ObjectBehavior
         $key = new Key([]);
         $board = new Board(
             new Uuid('7835a2f1-65c4-4e05-aacf-2e9ed950f5f2'),
-            new Key(['name' => 'test']),
+            new Key(['name' => 'test', 'uuid' => '7835a2f1-65c4-4e05-aacf-2e9ed950f5f2']),
             Factory::factory('1.0'),
             new Metadata(new Data('test_value')),
             null

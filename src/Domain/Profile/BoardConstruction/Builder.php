@@ -25,6 +25,7 @@ use Exception;
 
 class Builder implements DomainBuilder
 {
+    private const KEY_UUID = 'uuid';
     private const KEY_NAME = 'name';
     private const KEY_VALUE = 'value';
 
@@ -45,14 +46,18 @@ class Builder implements DomainBuilder
     {
         $keyValue = $key->getValue();
         try {
+            Assertion::keyExists($keyValue, self::KEY_UUID);
+            Assertion::uuid($keyValue[self::KEY_UUID]);
             Assertion::keyExists($keyValue, self::KEY_NAME);
+            Assertion::notEmpty($keyValue[self::KEY_NAME]);
             Assertion::keyExists($keyValue, self::KEY_VALUE);
+            Assertion::notEmpty($keyValue[self::KEY_VALUE]);
         } catch (Exception $e) {
             throw new UnableToBuildBoardException('Unable to create board due to: ' . $e->getMessage(), 0, $e);
         }
 
         return new Board(
-            new Key(['name' => $keyValue[self::KEY_NAME]]),
+            new Key(['name' => $keyValue[self::KEY_NAME], 'uuid' => $keyValue[self::KEY_UUID]]),
             $this->profile,
             new Data($keyValue[self::KEY_VALUE])
         );
