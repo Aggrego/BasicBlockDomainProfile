@@ -6,7 +6,7 @@
 
 # BasicBlockDomainProfile
 
-
+This represents simplest example of Profile. Basic blocks that holds one string in `value`. Also for key, shows `name`.
 
 ## Versioning
  
