@@ -13,9 +13,9 @@ declare(strict_types = 1);
 
 namespace Aggrego\BasicBlockDomainProfile\Domain\Profile\BoardTransformation;
 
-use Aggrego\DataBoard\Board\Board as DataBoard;
-use Aggrego\DataBoard\Board\Data;
-use Aggrego\DataBoard\Board\Prototype\Board as DataBoardPrototype;
+use Aggrego\DataDomainBoard\Board\Board as DataBoard;
+use Aggrego\DataDomainBoard\Board\Data;
+use Aggrego\DataDomainBoard\Board\Prototype\Board as DataBoardPrototype;
 use Aggrego\Domain\Board\Board;
 use Aggrego\Domain\Board\Key;
 use Aggrego\Domain\Board\Prototype\Board as BoardPrototype;
