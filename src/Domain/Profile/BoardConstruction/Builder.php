@@ -13,8 +13,8 @@ declare(strict_types = 1);
 
 namespace Aggrego\BasicBlockDomainProfile\Domain\Profile\BoardConstruction;
 
-use Aggrego\DataBoard\Board\Data;
-use Aggrego\DataBoard\Board\Prototype\Board;
+use Aggrego\DataDomainBoard\Board\Data;
+use Aggrego\DataDomainBoard\Board\Prototype\Board;
 use Aggrego\Domain\Board\Key;
 use Aggrego\Domain\Board\Prototype\Board as BoardPrototype;
 use Aggrego\Domain\Profile\BoardConstruction\Builder as DomainBuilder;

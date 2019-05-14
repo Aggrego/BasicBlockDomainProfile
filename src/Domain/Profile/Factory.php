@@ -21,7 +21,7 @@ class Factory
 {
     public const PROFILE_NAME = 'basic_block';
 
-    static public function factory(string $version): Profile
+    public static function factory(string $version): Profile
     {
         Assertion::regex($version, '~^([0-9]+\.{0,1})+$~');
         $normalized = (new VersionParser())->normalize($version);

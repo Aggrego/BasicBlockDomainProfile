@@ -6,9 +6,9 @@
 
 # BasicBlockDomainProfile
 
+This represents simplest example of Profile. Basic blocks that holds one string in `value`. Also for key, shows `name`.
 
-
-## Versioning§
+## Versioning
  
 Staring version ``1.0.0``, will follow [Semantic Versioning v2.0.0](http://semver.org/spec/v2.0.0.html).
 

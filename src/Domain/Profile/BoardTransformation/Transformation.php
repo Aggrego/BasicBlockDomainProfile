@@ -13,9 +13,9 @@ declare(strict_types = 1);
 
 namespace Aggrego\BasicBlockDomainProfile\Domain\Profile\BoardTransformation;
 
-use Aggrego\DataBoard\Board\Board as DataBoard;
-use Aggrego\DataBoard\Board\Data;
-use Aggrego\DataBoard\Board\Prototype\Board as DataBoardPrototype;
+use Aggrego\DataDomainBoard\Board\Board as DataBoard;
+use Aggrego\DataDomainBoard\Board\Data;
+use Aggrego\DataDomainBoard\Board\Prototype\Board as DataBoardPrototype;
 use Aggrego\Domain\Board\Board;
 use Aggrego\Domain\Board\Key;
 use Aggrego\Domain\Board\Prototype\Board as BoardPrototype;
@@ -32,19 +32,33 @@ class Transformation implements DomainTransformation
 
     /**
      * @param Key $key
-     * @param Board|DataBoard $board
+     * @param DataBoard|Board $board
      * @return BoardPrototype
      * @throws UnprocessableBoardException
      */
     public function transform(Key $key, Board $board): BoardPrototype
     {
+        if (!$board instanceof DataBoard){
+            throw new UnprocessableBoardException('Unable to process board due to incorrect board type: ' . get_class($board));
+        }
         $keyValue = $key->getValue();
         try {
             Assertion::keyExists($keyValue, self::KEY_VALUE);
         } catch (Exception $e) {
             throw new UnprocessableBoardException('Unable to process board due to: ' . $e->getMessage(), 0, $e);
         }
+        /** @var DataBoard $board */
+        $key = $this->getKey($keyValue, $board);
 
+        return new DataBoardPrototype(
+            $key,
+            $board->getProfile(),
+            new Data($keyValue[self::KEY_VALUE])
+        );
+    }
+
+    private function getKey(array $keyValue, DataBoard $board): Key
+    {
         if (isset($keyValue[self::KEY_NAME])) {
             $key = new Key(
                 [
@@ -55,11 +69,6 @@ class Transformation implements DomainTransformation
         } else {
             $key = $board->getKey();
         }
-
-        return new DataBoardPrototype(
-            $key,
-            $board->getProfile(),
-            new Data($keyValue[self::KEY_VALUE])
-        );
+        return $key;
     }
 }
