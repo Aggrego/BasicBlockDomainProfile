@@ -15,10 +15,10 @@ namespace spec\Aggrego\BasicBlockDomainProfile\Domain\Profile\BoardTransformatio
 
 use Aggrego\BasicBlockDomainProfile\Domain\Profile\BoardTransformation\Transformation;
 use Aggrego\BasicBlockDomainProfile\Domain\Profile\Factory;
-use Aggrego\DataBoard\Board\Board;
-use Aggrego\DataBoard\Board\Data;
-use Aggrego\DataBoard\Board\Metadata;
-use Aggrego\DataBoard\Board\Prototype\Board as BoardPrototype;
+use Aggrego\DataDomainBoard\Board\Board;
+use Aggrego\DataDomainBoard\Board\Data;
+use Aggrego\DataDomainBoard\Board\Prototype\Metadata;
+use Aggrego\DataDomainBoard\Board\Prototype\Board as BoardPrototype;
 use Aggrego\Domain\Board\Key;
 use Aggrego\Domain\Board\Uuid;
 use Aggrego\Domain\Profile\BoardTransformation\Exception\UnprocessableBoardException;

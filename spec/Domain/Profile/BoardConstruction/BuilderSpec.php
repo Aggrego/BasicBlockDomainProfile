@@ -15,7 +15,7 @@ namespace spec\Aggrego\BasicBlockDomainProfile\Domain\Profile\BoardConstruction;
 
 use Aggrego\BasicBlockDomainProfile\Domain\Profile\BoardConstruction\Builder;
 use Aggrego\BasicBlockDomainProfile\Domain\Profile\Factory;
-use Aggrego\DataBoard\Board\Prototype\Board;
+use Aggrego\DataDomainBoard\Board\Prototype\Board;
 use Aggrego\Domain\Board\Key;
 use Aggrego\Domain\Profile\BoardConstruction\Builder as DomainBuilder;
 use Aggrego\Domain\Profile\BoardConstruction\Exception\UnableToBuildBoardException;

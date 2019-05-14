@@ -2,7 +2,6 @@
   "name": "aggrego/basic-block-domain-profile",
   "type": "library",
   "description": "",
-  "minimum-stability": "dev",
   "license": "BSD-3-Clause",
   "keywords": [],
   "authors": [
@@ -12,14 +11,14 @@
   ],
   "require": {
     "php": ">=7.1",
-    "aggrego/domain": "dev-master",
-    "aggrego/data-board": "dev-master"
+    "aggrego/domain": "^0",
+    "aggrego/data-domain-board": "^0"
   },
   "require-dev": {
     "wikimedia/composer-merge-plugin": "1.4.*",
     "phpspec/phpspec": "^5.0",
-    "behat/behat": "^3.4",
-    "timitao/behat-symfony-container": "^1.1"
+    "squizlabs/php_codesniffer": "3.*",
+    "phpstan/phpstan": "^0.10"
   },
   "autoload": {
     "psr-4": {
